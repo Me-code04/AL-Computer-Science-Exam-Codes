@@ -7,6 +7,21 @@
 • You may assume the file exists and contains at least three lines.
  Write Python code for the procedure LastLines().'''
 
-f = open("TheTxtFile.txt", "r")
+def LastLines():
+    
+    f = open('TheTxtFile.txt', "r")
 
-print(len(f))
+    LineX = ""
+    LineY = ""
+    LineZ = ""
+
+    for line in f:
+        LineX = LineY
+        LineY = LineZ
+        LineZ = line
+
+    print(LineX)
+    print(LineY)
+    print(LineZ)
+
+LastLines()
